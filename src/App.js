@@ -19,7 +19,7 @@ import {
   Pie,
   Financial,
   ColorMapping,
-  Pyramit,
+  Pyramid,
   Stacked,
 } from "./pages";
 
@@ -67,10 +67,7 @@ const App = () => {
           <div>
             <Routes>
               {/* Dashboard */}
-              <Route
-                path="/"
-                element={<h1 className="text-xl text-black mt-4">ecommerce</h1>}
-              />
+              <Route path="/" element={<Ecommerce />} />
               <Route path="/ecommerce" element={<Ecommerce />} />
               {/* Pages */}
               <Route path="/orders" element={<Orders />} />
