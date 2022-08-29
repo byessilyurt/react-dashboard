@@ -3,7 +3,7 @@ import React from "react";
 import { BsCurrencyDollar } from "react-icons/bs";
 import { GoPrimitiveDot } from "react-icons/go";
 
-import { Stacked, Pie, Button, Sparkline } from "../components";
+import { Stacked, Pie, Button, SparkLine } from "../components";
 import {
   earningData,
   SparklineAreaData,
@@ -29,6 +29,94 @@ const Ecommerce = () => {
               text="Download"
               borderRadius="10px"
             />
+          </div>
+        </div>
+        <div className="flex justify-center m-3 flex-wrap gap-1 items-center">
+          {earningData.map((item, index) => (
+            <div
+              key={item.title}
+              className="bg-white dark:text-gray-200 dark:bg-secondary-bg md:w-56 p-4 pt-9 rounded-2xl"
+            >
+              <button
+                type="button"
+                style={{ backgroundColor: item.iconBg, color: item.iconColor }}
+                className="rounded-full p-4 text-2xl opacity-0.9 hover:drop-shadow-xl"
+              >
+                {item.icon}
+              </button>
+              <p className="mt-3">
+                <span className="text-lg font-semibold">{item.amount}</span>
+                <span className={`text-sm text-${item.pcColor} ml-2`}>
+                  {item.percentage}
+                </span>
+              </p>
+              <p className="text-sm text-gray-400 mt-1">{item.title}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="flex flex-wrap gap-10 lg:flex-nowrap justify-center ">
+        <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780 sm:w-480">
+          <div className="flex justify-between items-center">
+            <p className="font-semibold text-sm">Revenue Updates</p>
+            <div className="flex items-center gap-4">
+              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Expense</span>
+              </p>
+              <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+                <span>
+                  <GoPrimitiveDot />
+                </span>
+                <span>Budget</span>
+              </p>
+            </div>
+          </div>
+          <div className="mt-10 flex flex-wrap gap-10 justify-center">
+            <div className="border-r-1 border-color m-4 pr-10 ">
+              <div className="">
+                <p>
+                  <span className="text-3xl font-semibold">$93.439</span>
+                  <span className="p-1.5 rounded-full text-white bg-reen-400 cursor-pointer hover:drop-shadow-xl">
+                    54%
+                  </span>
+                </p>
+                <p className="text-gray-500 mt-1">Budget</p>
+              </div>
+              <div className="mt-8">
+                <p>
+                  <span className="text-3xl font-semibold">$43.439</span>
+                  <span className="p-1.5 rounded-full text-white bg-reen-400 cursor-pointer hover:drop-shadow-xl">
+                    32%
+                  </span>
+                </p>
+                <p className="text-gray-500 mt-1">Expense</p>
+              </div>
+              <div className="mt-5">
+                <SparkLine
+                  currentColor="blue"
+                  id="line-sparkline"
+                  type="Line"
+                  height="80px"
+                  width="250px"
+                  data={SparklineAreaData}
+                  color="blue"
+                />
+              </div>
+              <div className="mt-10">
+                <Button
+                  color="white"
+                  bgColor="blue"
+                  text="Download Report"
+                  borderRadius="10px"
+                />
+              </div>
+            </div>
+            <div>
+              <Stacked width="320px" height="360px" />
+            </div>
           </div>
         </div>
       </div>
