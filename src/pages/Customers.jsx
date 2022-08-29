@@ -22,7 +22,7 @@ const Customers = () => {
         dataSource={customersData}
         allowPaging
         allowSorting
-        toolbar={["Delete"]}
+        toolbar={["Add", "Delete", "Edit", "Search", "Print"]}
         editSettings={{
           allowEditing: true,
           allowAdding: true,
