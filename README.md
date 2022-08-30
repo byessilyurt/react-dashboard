@@ -11,7 +11,7 @@ It is a CRA project to present a nicely styled Admin Dashboard which is function
  - Color Picker
  - Calendar
  - Tables with search, edit, delete, print functionalities. 
- - User Authentication, Cart, Theming * 
+ - User Authentication, Cart, Theming ** 
 
 Styling was applied using TailwindCSS framework. 
   - responsive design
