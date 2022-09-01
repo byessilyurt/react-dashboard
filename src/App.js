@@ -67,26 +67,47 @@ const App = () => {
             <div>
               <Routes>
                 {/* Dashboard */}
-                <Route path="/" element={<Ecommerce />} />
-                <Route path="/ecommerce" element={<Ecommerce />} />
+                <Route path="/react-dashboard" element={<Ecommerce />} />
+                <Route
+                  path="/react-dashboard/ecommerce"
+                  element={<Ecommerce />}
+                />
                 {/* Pages */}
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/employees" element={<Employees />} />
-                <Route path="/customers" element={<Customers />} />
+                <Route path="/react-dashboard/orders" element={<Orders />} />
+                <Route
+                  path="/react-dashboard/employees"
+                  element={<Employees />}
+                />
+                <Route
+                  path="/react-dashboard/customers"
+                  element={<Customers />}
+                />
                 {/* apps */}
-                <Route path="/kanban" element={<Kanban />} />
-                <Route path="/editor" element={<Editor />} />
-                <Route path="/calendar" element={<Calendar />} />
-                <Route path="/color-picker" element={<ColorPicker />} />
+                <Route path="/react-dashboard/kanban" element={<Kanban />} />
+                <Route path="/react-dashboard/editor" element={<Editor />} />
+                <Route
+                  path="/react-dashboard/calendar"
+                  element={<Calendar />}
+                />
+                <Route
+                  path="/react-dashboard/color-picker"
+                  element={<ColorPicker />}
+                />
                 {/* Charts */}
-                <Route path="/line" element={<Line />} />
-                <Route path="/area" element={<Area />} />
-                <Route path="/bar" element={<Bar />} />
-                <Route path="/pie" element={<Pie />} />
-                <Route path="/financial" element={<Financial />} />
-                <Route path="/color-mapping" element={<ColorMapping />} />
-                <Route path="/pyramid" element={<Pyramid />} />
-                <Route path="/stacked" element={<Stacked />} />
+                <Route path="/react-dashboard/line" element={<Line />} />
+                <Route path="/react-dashboard/area" element={<Area />} />
+                <Route path="/react-dashboard/bar" element={<Bar />} />
+                <Route path="/react-dashboard/pie" element={<Pie />} />
+                <Route
+                  path="/react-dashboard/financial"
+                  element={<Financial />}
+                />
+                <Route
+                  path="/react-dashboard/color-mapping"
+                  element={<ColorMapping />}
+                />
+                <Route path="/react-dashboard/pyramid" element={<Pyramid />} />
+                <Route path="/react-dashboard/stacked" element={<Stacked />} />
               </Routes>
             </div>
           </div>
