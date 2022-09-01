@@ -7,6 +7,9 @@ const ColorPicker = () => {
   const [value, setValue] = React.useState({
     hex: "#FF0000",
   });
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(value.hex);
+  };
   const change = (args) => {
     setValue({ hex: args.currentValue.hex });
     document.getElementById("preview").style.backgroundColor =
@@ -21,11 +24,13 @@ const ColorPicker = () => {
           id="preview" //pen
         />
         <div
-          className={`text-xl font-semibold tracking-tight w-40 rounded-lg shadow-xl m-auto bg-white`}
+          onClick={copyToClipboard}
+          className={`cursor-pointer text-xl font-semibold tracking-tight w-40 rounded-lg shadow-xl m-auto bg-white`}
           style={{ color: `${value.hex}` }}
         >
           {value.hex}
         </div>
+
         <div className="flex justify-center items-center gap-20 flex-wrap">
           <div>
             <p className="text-2xl mt-2 mb-4 font-semibold">Inline Palette</p>
