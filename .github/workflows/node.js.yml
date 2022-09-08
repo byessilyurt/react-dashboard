@@ -20,8 +20,6 @@ jobs:
           npm install
       - run:
           npm run build
-      - run:
-          npm run test
       - uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
