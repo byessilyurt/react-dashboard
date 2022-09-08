@@ -1,6 +1,6 @@
 # Keywords
 
-ReactJS, TailwindCSS, ContextAPI, Syncfusion
+ReactJS, TailwindCSS, ContextAPI, Syncfusion, GitHub Actions
 
 
 ## Dashboard
