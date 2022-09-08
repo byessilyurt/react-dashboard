@@ -1,6 +1,10 @@
 # Keywords
 
-ReactJS, TailwindCSS, ContextAPI, Syncfusion, GitHub Actions
+ReactJS, TailwindCSS, ContextAPI, Syncfusion, GitHub Actions, GitHub Pages
+
+
+# Demo
+https://byessilyurt.github.io/react-dashboard
 
 
 ## Dashboard
@@ -18,7 +22,7 @@ Styling was applied using TailwindCSS framework.
   - dark mode compatibility
 
 Context API
- 
+Workflow is automated using GitHub actions. It tests (if any), builds, and deploys the app (to GitHub pages). 
  
  ** not implemented yet.
 
